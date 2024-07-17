@@ -1,0 +1,61 @@
+#!/bin/bash
+
+######################################
+### Github action
+######################################
+
+yuros_gtpull() {
+  yuros_devhead &&
+    git pull
+}
+
+yuros_gtpush() {
+  yuros_devhead &&
+    read -p "insert commit message : " githubcommit
+  git add .
+  git commit -m "$githubcommit"
+  git push
+}
+
+yuros_gtclon() {
+  yuros_devhead &&
+    read -p "github repository link : " githubrepolink &&
+    read -p "rename directory name  : " githubreponame &&
+    echo '------------------------------------------------------------------------------'
+  if [[ ! -z $githubreponame ]]; then
+    git clone "$githubrepolink" "$githubreponame"
+  else
+    git clone "$githubrepolink"
+  fi
+}
+
+yuros_gtmrge() {
+  yuros_devhead &&
+    git merge
+}
+
+yuros_gtmenu() {
+  yuros_devhead &&
+    local action=("push" "pull" "merge" "clone")
+  echo "available github command :"
+  for index in "${!action[@]}"; do
+    echo "[$(($index + 1))] ${action[$index]}"
+  done
+  read -p "select command using number : " getact
+  gitact=${action[$(($getact - 1))]}
+}
+
+yuros_githubs() {
+  yuros_gtmenu &&
+    if [[ $gitact == "push" ]]; then
+      yuros_gtpush
+    elif [[ $gitact == "merge" ]]; then
+      yuros_gtmrge
+    elif [[ $gitact == "clone" ]]; then
+      yuros_gtclon
+    elif [[ $gitact == "pull" ]]; then
+      yuros_gtpull
+    else
+      echo "error : action not available"
+    fi
+}

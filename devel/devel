@@ -1,0 +1,29 @@
+#!/bin/env bash
+
+lib=$(pwd)/lib
+src=($(ls $(pwd)/src))
+
+######################################
+###  load source file
+######################################
+
+for sile in "${src[@]}"; do
+  if [[ -f $(pwd)/src/$sile ]]; then
+    source $(pwd)/src/$sile
+    echo $(pwd)/src/$sile
+  fi
+done
+
+#####################################
+### main function
+#####################################
+
+if [[ $1 == "make" ]]; then
+  yuros_appdenv
+elif [[ $1 == "git" ]]; then
+  yuros_githubs
+elif [[ $1 == "-h" || $1 == "--help" ]]; then
+  yuros_helper
+else
+  echo "parameter eror, type command 'devel -h' or 'devel --help' to find availble parameter"
+fi

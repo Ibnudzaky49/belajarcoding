@@ -1,0 +1,22 @@
+#!/bin/bash
+
+##########################################
+### General
+##########################################
+
+yuros_devhead() {
+  clear
+  echo '------------------------------------------------------------------------------'
+  echo 'BODAR - Yuros Development and Deployment Tools'
+  echo 'copyright@yuros.org 2024'
+  echo '------------------------------------------------------------------------------'
+  echo 'Bugs Report'
+  echo '[1] loki <loki@yuros.org>'
+  echo '[2] achmadbaihaqi <achmad.baihaqi@yuros.org>'
+  echo '[3] muhammadhaydarilhamkamil <muhammad.haydar.kamil@yuros.org>'
+  echo '[4] wisnusetiabudi <wisnu.setiabudi@yuros.org>'
+  echo '[5] sultanfajarramadhan <sultan.fajar.ramadhan@yuros.org>'
+  echo '[6] ibnudzakysolihin <ibnu.dzaky.solihin@yuros.org>'
+  echo '------------------------------------------------------------------------------'
+
+}

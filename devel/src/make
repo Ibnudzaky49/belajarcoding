@@ -1,0 +1,130 @@
+#!/bin/env bash
+
+########################################
+### Deployment Environtment
+########################################
+
+dirs=('bin' 'opt' 'etc' 'ven' 'src')
+file=('etc/config')
+
+yuros_devname() {
+  read -p "insert your application name : " appname
+}
+
+yuros_devlang() {
+
+  local lang=('c' 'golang' 'python' 'rust' 'shell')
+
+  echo 'development language :'
+  for index in "${!lang[@]}"; do
+    echo "[$(($index + 1))] ${lang[$index]}"
+  done
+  read -p "insert programing language , ex 1 for c : " getlang
+  applang=${lang[$(($getlang - 1))]}
+}
+
+yuros_makesrc() {
+  msrc=$appname/src/
+  local vsrc=('gui' 'lib' 'env' 'var' 'etc')
+
+  for s in "${vsrc[@]}"; do
+    mkdir $msrc/$s
+  done
+}
+
+yuros_makedir() {
+  mkdir $appname
+  for i in "${dirs[@]}"; do
+    if [[ ! -d $appname/$i ]]; then
+      mkdir $appname/$i
+      if [[ $i == "src" ]]; then
+        yuros_makesrc
+      fi
+      yuros_notify 4 $i
+    else
+      yuros_notify 5 $i
+    fi
+  done
+
+}
+
+yuros_maklang() {
+  if [[ $applang == "c" ]]; then
+    yuros_makecc
+  elif [[ $applang == "golang" ]]; then
+    yuros_makego
+  elif [[ $applang == "python" ]]; then
+    yuros_makepy
+  elif [[ $applang == "rust" ]]; then
+    yuros_makeru
+  elif [[ $applang == "shell" ]]; then
+    yuros_makesh
+  else
+    echo "programing langguage not supported"
+  fi
+}
+
+yuros_makecc() {
+  touch $msrc/$appname.c
+  cat <<EOF >$msrc/$appname.c
+#include <stdio.h>
+
+int main () 
+{
+	# insert your function here
+}
+
+EOF
+}
+
+yuros_makego() {
+  touch $msrc/$appname.go
+  cat <<EOF >$msrc/$appname.go
+package main
+
+func main() {
+    # insert your function here
+}
+EOF
+}
+
+yuros_makesh() {
+  touch $msrc/$appname.sh
+  echo "#!/bin/env bash" >$msrc/$appname.sh
+}
+
+yuros_makepy() {
+  touch $msrc/$appname.py
+}
+
+yuros_makeru() {
+  touch $msrc/$appname.rs
+  cat <<EOF >$msrc/$appname.rs
+fn
+main() {
+    // insert your function here
+}
+EOF
+
+}
+
+yuros_makefil() {
+  for o in "${file[@]}"; do
+    if [[ ! -f $o ]]; then
+      touch $appname/$o
+      yuros_notify 2 $o
+    else
+      yuros_notify 3 $o
+    fi
+  done
+}
+
+yuros_appdenv() {
+  yuros_devhead &&
+    yuros_devname &&
+    yuros_devhead &&
+    yuros_devlang &&
+    yuros_makedir &&
+    yuros_maklang &&
+    yuros_makefil
+}

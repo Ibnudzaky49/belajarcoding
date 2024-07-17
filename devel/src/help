@@ -1,0 +1,9 @@
+#!/bin/bash
+
+yuros_helper() {
+    echo "available command :"
+    echo "- 'devel make' : create development environtment"
+    echo "- 'devel git'  : git action helper"
+}
+
+
