@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo img{
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+.paddinghead{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bgorens{
+    background-color: orange;
+}
+
+/* .navbar{} */
+
+.anu{
+    display: flex;
+    list-style: none;
+    margin-left: 150%;
+}
+
+.anu li{
+    margin-left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding-left: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 7px;
+    border-radius: 1px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: #0d314246;
+}
+
+.hamburger{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.hamburger div{
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+}
+
+.pertama{
+    background-color: #0d3142;
+    color: white;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.pertama .atas{
+    color: orange;
+    padding: 1% 7%;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+.pertama .tengah{
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+}
+
+.pertama .tengah .kanan{
+    text-align: left;
+    margin-right: 15%;
+    margin-left: 3%;
+}
+
+.pertama .tengah .kanan .dua{
+    color: orange;
+    font-size: 20px;
+}
+
+.kedua{
+    background-color: #0d3142;
+    padding-top: 4%;
+}
+
+.kedua .bawahsatu{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 15%;
+}
+
+/* .kedua .bawahsatu .kiri{
+    
+} */
+
+.kedua .bawahsatu .kanan{
+    text-align: left;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+.ketiga{
+    background-color: #0d3142;
+    padding-top: 6%;
+    padding-bottom: 15%;
+}
+
+.ketiga .bawahsatu{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 15%;
+}
+
+.ketiga .bawahsatu .kanan{
+    text-align: left;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+/* .kedua .bawahsatu .tekssatu{ */
+    /* display: flex; */
+    /* margin-left: 1%; */
+    /* align-items: center; */
+/* } */
+
+footer{
+    display: flex;
+    background-color: orange;
+}
+
+footer .kanan{
+    margin-left: 65%;
+}
+
+footer .kiri ul{
+    display: flex;
+    list-style: none;
+}
+
+footer .kiri li{
+    margin: 15px;
+}

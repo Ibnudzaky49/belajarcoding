@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo img{
+    border-radius: 50px;
+    margin-left: 30px;
+}
+
+.paddinghead{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bgorens{
+    background-color: orange;
+}
+
+/* .navbar{} */
+
+.anu{
+    display: flex;
+    list-style: none;
+    margin-left: 125%;
+}
+
+.anu li{
+    margin-left: 10px;
+    border: 1px solid black;
+    padding-left: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 7px;
+    border-radius: 1px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.hamburger{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.hamburger div{
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+}
+
+.kesatu{
+    background-color: #0d3142 ;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.kesatu .kanan{
+    text-align: left;
+}
+
+.kesatu .atas h3{
+    color: orange;
+    padding: 3% 10%;
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+.kesatu .tengah{
+display: flex;
+align-items: center;
+padding-left: 50px;
+padding-right: 50px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.kesatu .tengah .kiri{
+    margin-right: 15%;
+}
+.kesatu .tengah .kanan{
+    margin-right: 1%;
+    font-size: 1.3rem;
+}
+
+.kesatu .tengah .kanan button{
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+
+}
+
+.kesatu .tengah .kiri .box{
+    height: 270px;
+    width: 240px;
+    background-color: #0f1b22;
+    margin-left: 50%;
+    margin-right: 10%;
+    border-radius: 20%;
+    
+}
+
+.kesatu .bawah .kiri{
+    margin-left: 1%;
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+.kesatu .bawah .kanan{
+    margin-right: 15%;
+}
+
+.kesatu .bawah .kanan .box{
+    height: 270px;
+    width: 220px;
+    background-color: #0f1b22;
+    margin-left: 50%;
+    margin-right: 40%;
+    border-radius: 20%;
+}
+
+.kesatu .bawah{
+    display: flex;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+.kesatu .bawah .kiri button{
+        padding: 10px;
+        border-radius: 50px;
+        font-size: 20px;
+    }
+
+.kedua{
+    background-color: #0f1b22 ;
+    color: white;
+    /* display: flex; */
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+.kedua .atas h3{
+    padding: 3% 7%;
+    color: orange;
+    font-size: 3em; 
+    text-decoration: underline;  
+}
+
+.kedua .bawah{
+    display: grid;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 3em;
+}
+
+.kedua .bawah .box{
+    height: 170px;
+    width: 170px;
+    background-color: #0d3142;
+    margin-left: 25%;
+    margin-right: 10%;
+    border-radius: 20%;
+    border: 5px solid orange;
+}
+
+.kedua .bawah .box .teks{
+    margin-top: 100%;
+    margin-left: 10%;
+    margin-top: 105%;
+}
+
+footer{
+    display: flex;
+    background-color: orange;
+}
+
+footer .kanan{
+    margin-left: 65%;
+}
+
+footer .kiri ul{
+    display: flex;
+    list-style: none;
+}
+
+footer .kiri li{
+    margin: 15px;
+}
